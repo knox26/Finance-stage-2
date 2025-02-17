@@ -105,12 +105,12 @@ const TransactionList = () => {
   };
 
   return (
-    <div className=" p-1 lg:p-6  mx-auto space-y-6 h-full ">
+    <div className=" p-1 lg:px-4 mx-auto space-y-6 h-full ">
       <Toaster />
 
-      <CardContent className="p-2 md:p-5 h-full overflow-y-scroll">
+      <CardContent className="p-2 md:p-5 h-full ">
         <h2 className="text-xl font-semibold mb-1">Transaction List</h2>
-        <Table className='overflow-y-scroll'>
+        <Table className="overflow-y-scroll">
           <TableHeader>
             <TableRow>
               <TableHead>Date</TableHead>
@@ -120,13 +120,14 @@ const TransactionList = () => {
               <TableHead>Actions</TableHead>
             </TableRow>
           </TableHeader>
-          <TableBody className='overflow-y-scroll' >
+          <TableBody className="overflow-y-scroll">
             {sortedTransactions.map((tx, index) => (
               <TableRow key={index}>
                 <TableCell>{formatDate(tx.date)}</TableCell>
                 <TableCell>{tx.description}</TableCell>
                 <TableCell>${tx.amount.toFixed(2)}</TableCell>
-                <TableCell className="pl-4">{tx.category}</TableCell> {/* Display category */}
+                <TableCell className="pl-4">{tx.category}</TableCell>{" "}
+                {/* Display category */}
                 <TableCell className="flex space-x-2 mt-1">
                   <Button
                     onClick={() => handleEditTransaction(index)}

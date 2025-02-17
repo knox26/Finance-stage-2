@@ -19,10 +19,10 @@ function App() {
     <div className="p-6 max-w-6xl mx-auto space-y-6 h-full ">
       <Toaster />
       <div className=" md:flex  gap-4 w-full space-y-6 md:space-y-0 justify-center items-center">
-        <Card className="md:w-[30%] ">
+        <Card className="md:w-[30%] overflow-y-auto">
           <AddTransaction />
         </Card>
-        <Card className="md:w-full  max-h-[46vh] overflow-y-scroll md:overflow-y-hidden p-2 md:p-0">
+        <Card className="md:w-full  max-h-[46vh] overflow-y-auto  p-2 md:p-0">
           <TransactionList />
         </Card>
       </div>
