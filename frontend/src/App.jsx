@@ -22,7 +22,7 @@ function App() {
         <Card className="md:w-[30%] overflow-y-auto">
           <AddTransaction />
         </Card>
-        <Card className="md:w-full  max-h-[46vh] overflow-y-auto  p-2 md:p-0">
+        <Card className="md:w-full  h-[46vh] overflow-y-auto  p-2 md:p-0">
           <TransactionList />
         </Card>
       </div>
